@@ -11,6 +11,9 @@ int countDigit(int n) // count the digit
 
 int main()
 {
+// data type conversion
+    int b = static_cast <int> (2.5);
+
 // variable length array
     int *ar;
     ar = new int[n];
