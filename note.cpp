@@ -1,13 +1,10 @@
 #include <iostream>
 #include <algorithm>
 #include <vector>
+#include <map>
 #include <sstream>
-int countDigit(int n) // count the digit
-{
-    if (n / 10 == 0)
-        return 1;
-    return 1 + countDigit(n / 10);
-}
+#include "note.h"
+using namespace std;
 
 int main()
 {
@@ -34,14 +31,6 @@ int main()
     string subX = x.substr(0, x.find(".")); // "." not included
     x.erase(0, x.find("."));
 
-// init a private member in class
-    class BankAccount
-    {
-    private:
-        int total;
-    };
-    int BankAccount::total = 0;
-
 // 2D vector init & print
     vector<vector<int> > vec(2, vector<int>(6, 0)); // (row, clmn(#clmn, elem))
     for (int i = 0; i < vec.size(); i++)
@@ -51,5 +40,14 @@ int main()
             cout << vec[i][j] << " ";
         }
         cout << endl;
+    }
+
+    map <string, int> m;
+    m["London"] = 0;
+    m["Paris"] = 1;
+
+    {
+        using namespace NS1;
+        test();
     }
 }
