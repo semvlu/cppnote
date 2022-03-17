@@ -10,15 +10,24 @@ int main()
 {
 // data type conversion
     int b = static_cast <int> (2.5);
-
+    char* Id = const_cast<char*>(id);
+    
+    string str1;
+    char* str2 = str1.c_str();;
+    
+    char* m;
+    string mStr;
+    int n = atoi(m);
+    n = stoi(mStr);
+    
 // variable length array
     int *ar;
     ar = new int[n];
 
     cout << fixed << setprecision(6) << n;
 
-    stringstream ss;
-    ss << list;
+// string to num with a line of string
+    stringstream ss(list);
     int num;
     while (ss >> num)
         a.push_back(num);
@@ -36,9 +45,7 @@ int main()
     for (int i = 0; i < vec.size(); i++)
     {
         for (int j = 0; j < vec[i].size(); j++)
-        {
             cout << vec[i][j] << " ";
-        }
         cout << endl;
     }
 
