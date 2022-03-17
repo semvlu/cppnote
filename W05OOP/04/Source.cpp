@@ -1,4 +1,4 @@
-// Name: ªÂ¬f§g
+// Name: ÂªÃ‚Â¬fÂ§g
 // Date: Mar 17, 2022
 // Last update: Mar 17, 2022
 // Problem statement: This C++ program do the sudoku checker task
@@ -10,46 +10,62 @@
 using namespace std;
 bool sudoku(vector<vector <int> > a)
 {
-	bool c = true;
+	bool chk = true;
 	//each 3x3 square contains each number from 1-9 exactly once
 	for (int i = 0; i < 3; i++)
 	{
 		vector <int> b(9);
+		vector <int> c(9);
+		vector <int> d(9);
 		for (int j = 3 * i; j < 3 * i + 3; j++)
 		{
-			for (int k = j; k < j + 3; k++)
-			{
+			// run the 1st big column
+			for (int k = 0; k < 3; k++)
 				b.push_back(a[j][k]);
-			}
+
+			// run the 2nd big column
+			for (int k = 3; k < 6; k++)
+				c.push_back(a[j][k]);
+
+			// run the 3rd big column
+			for (int k = 6; k < 9; k++)
+				d.push_back(a[j][k]);
 		}
 		sort(b.begin(), b.end());
+		sort(c.begin(), c.end());
+		sort(d.begin(), d.end());
 
-		for (int j = 0; j < 9; j++)
+		// check for no dupllicatess
+		for (int l = 0; l < 9; l++)
 		{
-			if (b[i] != i + 1)
+			if (b[l] != l + 1 || c[l] != l + 1 || d[l] != l + 1)
 			{
-				c = false;
+				chk = false;
 				break;
 			}
 		}
-		if (c == false)
+		
+		if (chk == false)
 			break;
 	}
-	//each row and column doesn¡¦t contain duplicates
-	for (int i = 0; i < 9; i++)
+	//each row and column doesnï¿½ï¿½t contain duplicates
+	if (chk == true)
 	{
-		for (int j = 0; j < 9; j++)
+		for (int i = 0; i < 9; i++)
 		{
-			for (int k = j; k < 9; k++)
+			for (int j = 0; j < 9; j++)
 			{
-				if (a[i][j] == a[i][k])
-					c = false;
-				else if (a[j][i] == a[k][i])
-					c = false;
+				for (int k = j; k < 9; k++)
+				{
+					if (a[i][j] == a[i][k])
+						chk = false;
+					else if (a[j][i] == a[k][i])
+						chk = false;
+				}
 			}
 		}
 	}
-	return c;
+	return chk;
 }
 
 int main()
