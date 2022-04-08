@@ -1,6 +1,3 @@
-// Name: ªÂ¬f§g
-// Date: Mar 31, 2022
-// Last Update: Mar 31, 2022
 // Problem statement: This C++ program do the 7 segment display task. 
 #include <iostream>
 #include <string>
