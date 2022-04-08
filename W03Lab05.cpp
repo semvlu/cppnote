@@ -1,6 +1,3 @@
-// Name: ªÂ¬f§g
-// Date: Mar 3, 2022
-// Last Update: Mar 3, 2022
 // Problem statement: This C++ program do the Simple Drawing task
 
 #include <iostream>
