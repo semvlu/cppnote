@@ -10,24 +10,18 @@ int main()
 {
 // data type conversion
     int b = static_cast <int> (2.5);
-    char* Id = const_cast<char*>(id);
-    
-    string str1;
-    char* str2 = str1.c_str();;
-    
-    char* m;
-    string mStr;
-    int n = atoi(m);
-    n = stoi(mStr);
-    
+
 // variable length array
     int *ar;
     ar = new int[n];
+// dynamic array memory clear
+    delete [] ar;
+    ar = nullptr;
 
     cout << fixed << setprecision(6) << n;
 
-// string to num with a line of string
-    stringstream ss(list);
+    stringstream ss;
+    ss << list; // string list
     int num;
     while (ss >> num)
         a.push_back(num);
@@ -36,8 +30,8 @@ int main()
 // count the time the elem a[n] appears
     int cntr = count(a.begin(), a.end(), a[n]);
 
-    // "." not included
-    string subX = x.substr(0, x.find(".")); // "." not included
+// "." not included
+    string subX = x.substr(0, x.find("."));
     x.erase(0, x.find("."));
 
 // 2D vector init & print
@@ -57,4 +51,26 @@ int main()
         using namespace NS1;
         test();
     }
+
+// putback
+    char c, d;
+    cin.putback('A');
+    cin.putback('b');
+    cin >> c >> d; // c = 'b', d = 'A'
+
+//ignore
+    char first, last;
+    first = cin.get();     // get one character
+    cin.ignore(256, ' ');   // ignore until space
+    last = cin.get();      // get one character
+    cout << "Your initials are " << first << last << '\n';
+
+// peek
+    istringstream s("Laptop");
+    char c1 = s.peek();
+    char c2 = s.get();
+    char c3 = s.get();
+    char c4 = s.get();
+    cout << c1 << endl << c2 << endl
+         << c3 << endl << c4 << endl;
 }
