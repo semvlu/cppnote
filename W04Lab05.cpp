@@ -1,6 +1,3 @@
-﻿// Name: 祁柏君
-// Date: Mar 10, 2022
-// Last Update: Mar 10, 2022
 // Problem statement: This C++ program do the Collatz Conjecture task
 #include <iostream>
 using namespace std;
