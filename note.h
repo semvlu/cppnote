@@ -76,3 +76,33 @@ namespace NS1
         std::cout << "This is a func from namespace NS1" << std::endl;
     }
 }
+
+// copy constructor & destructor
+class PFArrayD
+{
+private:
+    double *a; //for an array of doubles.
+    int capacity;
+    int used;
+public:
+    PFArrayD();
+    PFArrayD(int capacityValue);
+    PFArrayD(const PFArrayD& obj):capacity(obj.getCapacity( )), used(obj.getNumberUsed( ))
+    {
+        a = new double[capacity];
+        for (int i =0; i < used; i++)
+            a[i] = obj.a[i];
+    }
+    ~PFArrayD(){ delete[] a; }
+};
+
+PFArrayD b(20);
+for ( int i = 0; i < 20; i++)
+    b.addElement(i);
+PFArrayD temp(b);
+class Position
+{
+public:
+    Position(const Position&) = default;
+};
+}
