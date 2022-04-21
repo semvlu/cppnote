@@ -1,3 +1,9 @@
+/*
+    WARNING
+    in my perspective, member "digits" is a string w/o '.'
+    if a BigInt is int, dotPlace = 0
+    and for decimal, e.g. 1.22 -> dotPlace = 1, 66.21543 -> dotPlace = 2, etc.
+*/
 #pragma once
 #include <iostream>
 #include <string>
@@ -17,20 +23,30 @@ public:
 	BigInt(string n) { name = n; };
 	BigInt(bool, string, string);
 //================================================================== 
-// declare operator existence
-    BigInt operator*(const BigInt rhs); const
+// declare operator  & function existence
+    BigInt operator*(const BigInt rhs) const;
+    void setType(bool t);
+    void setDigits(string dgt);
+    void setDotPlace(int d);
 //================================================================== 
 };
 
 //================================================================== 
 // codes begin here
+void BigInt::setType(bool t) { type = t; }
+void BigInt::setDigits(string dgt) { digits = dgt; }
+void BigInt::setDotPlace(int d) { dotPlace = d; }
+
 BigInt BigInt::operator*(const BigInt rhs) const
 {
+    BigInt c;
     string ans;
     bool ansType;
+    int decPt = dotPlace + rhs.dotPlace;
     int len1 = digits.size();
     int len2 = rhs.digits.size();
-    string dec_0 = "0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    // 101 0s
+    string dec_0 = "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000";
 
     // judge ans int or dec
     if (type == 0 && rhs.type == 0)
@@ -82,10 +98,14 @@ BigInt BigInt::operator*(const BigInt rhs) const
             q--;
         while (q >= 0)
             ans += to_string(res[q--]);
-        // nsert the decimal point
+
         if (ansType == 1)
-            ans.insert(ans.end() - 100, '.');
+            // retain only first 100 digits after decimal point
+            ans.erase(decPt + 100); 
     }
-    return BigInt(ans);
+    c.setDigits(ans);
+    c.setDotPlace(decPt);
+    c.setType(ansType);
+    return c;
 }
 //==================================================================
