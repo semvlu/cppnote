@@ -17,40 +17,40 @@ int main()
 			switch (sub[h].length())
 			{
 			case 1:
-				conv[h] = "¹s¸U¹s¥a¹s¨Õ¹s¬B";
+				conv[h] = "é›¶è¬é›¶ä»Ÿé›¶ä½°é›¶æ‹¾";
 				for (int i = 0; i < sub[h].length(); i++)
 				{
 					switch (sub[h][i])
 					{
 					case '0':
-						conv[h].append("¹s");
+						conv[h].append("é›¶");
 						break;
 					case '1':
-						conv[h].append("³ü");
+						conv[h].append("å£¹");
 						break;
 					case '2':
-						conv[h].append("¶L");
+						conv[h].append("è²³");
 						break;
 					case '3':
-						conv[h].append("°Ñ");
+						conv[h].append("åƒ");
 						break;
 					case '4':
-						conv[h].append("¸v");
+						conv[h].append("è‚†");
 						break;
 					case '5':
-						conv[h].append("¥î");
+						conv[h].append("ä¼");
 						break;
 					case '6':
-						conv[h].append("³°");
+						conv[h].append("é™¸");
 						break;
 					case '7':
-						conv[h].append("¬m");
+						conv[h].append("æŸ’");
 						break;
 					case '8':
-						conv[h].append("®Ã");
+						conv[h].append("æŒ");
 						break;
 					case '9':
-						conv[h].append("¨h");
+						conv[h].append("ç–");
 						break;
 					default:
 						break;
@@ -58,40 +58,40 @@ int main()
 				}
 				break;
 			case 2:
-				conv[h] = "¹s¸U¹s¥a¹s¨Õ¬B";
+				conv[h] = "é›¶è¬é›¶ä»Ÿé›¶ä½°æ‹¾";
 				for (int i = 0; i < sub[h].length(); i++)
 				{
 					switch (sub[h][i])
 					{
 					case '0':
-						conv[h].insert(4 * i + 12, "¹s");
+						conv[h].insert(4 * i + 12, "é›¶");
 						break;
 					case '1':
-						conv[h].insert(4 * i + 12, "³ü");
+						conv[h].insert(4 * i + 12, "å£¹");
 						break;
 					case '2':
-						conv[h].insert(4 * i + 12, "¶L");
+						conv[h].insert(4 * i + 12, "è²³");
 						break;
 					case '3':
-						conv[h].insert(4 * i + 12, "°Ñ");
+						conv[h].insert(4 * i + 12, "åƒ");
 						break;
 					case '4':
-						conv[h].insert(4 * i + 12, "¸v");
+						conv[h].insert(4 * i + 12, "è‚†");
 						break;
 					case '5':
-						conv[h].insert(4 * i + 12, "¥î");
+						conv[h].insert(4 * i + 12, "ä¼");
 						break;
 					case '6':
-						conv[h].insert(4 * i + 12, "³°");
+						conv[h].insert(4 * i + 12, "é™¸");
 						break;
 					case '7':
-						conv[h].insert(4 * i + 12, "¬m");
+						conv[h].insert(4 * i + 12, "æŸ’");
 						break;
 					case '8':
-						conv[h].insert(4 * i + 12, "®Ã");
+						conv[h].insert(4 * i + 12, "æŒ");
 						break;
 					case '9':
-						conv[h].insert(4 * i + 12, "¨h");
+						conv[h].insert(4 * i + 12, "ç–");
 						break;
 					default:
 						break;
@@ -99,40 +99,40 @@ int main()
 				}
 				break;
 			case 3:
-				conv[h] = "¹s¸U¹s¥a¨Õ¬B";
+				conv[h] = "é›¶è¬é›¶ä»Ÿä½°æ‹¾";
 				for (int i = 0; i < sub[h].length(); i++)
 				{
 					switch (sub[h][i])
 					{
 					case '0':
-						conv[h].insert(4 * i + 8, "¹s");
+						conv[h].insert(4 * i + 8, "é›¶");
 						break;
 					case '1':
-						conv[h].insert(4 * i + 8, "³ü");
+						conv[h].insert(4 * i + 8, "å£¹");
 						break;
 					case '2':
-						conv[h].insert(4 * i + 8, "¶L");
+						conv[h].insert(4 * i + 8, "è²³");
 						break;
 					case '3':
-						conv[h].insert(4 * i + 8, "°Ñ");
+						conv[h].insert(4 * i + 8, "åƒ");
 						break;
 					case '4':
-						conv[h].insert(4 * i + 8, "¸v");
+						conv[h].insert(4 * i + 8, "è‚†");
 						break;
 					case '5':
-						conv[h].insert(4 * i + 8, "¥î");
+						conv[h].insert(4 * i + 8, "ä¼");
 						break;
 					case '6':
-						conv[h].insert(4 * i + 8, "³°");
+						conv[h].insert(4 * i + 8, "é™¸");
 						break;
 					case '7':
-						conv[h].insert(4 * i + 8, "¬m");
+						conv[h].insert(4 * i + 8, "æŸ’");
 						break;
 					case '8':
-						conv[h].insert(4 * i + 8, "®Ã");
+						conv[h].insert(4 * i + 8, "æŒ");
 						break;
 					case '9':
-						conv[h].insert(4 * i + 8, "¨h");
+						conv[h].insert(4 * i + 8, "ç–");
 						break;
 					default:
 						break;
@@ -140,40 +140,40 @@ int main()
 				}
 				break;
 			case 4:
-				conv[h] = "¹s¸U¥a¨Õ¬B";
+				conv[h] = "é›¶è¬ä»Ÿä½°æ‹¾";
 				for (int i = 0; i < sub[h].length(); i++)
 				{
 					switch (sub[h][i])
 					{
 					case '0':
-						conv[h].insert(4 * i + 4, "¹s");
+						conv[h].insert(4 * i + 4, "é›¶");
 						break;
 					case '1':
-						conv[h].insert(4 * i + 4, "³ü");
+						conv[h].insert(4 * i + 4, "å£¹");
 						break;
 					case '2':
-						conv[h].insert(4 * i + 4, "¶L");
+						conv[h].insert(4 * i + 4, "è²³");
 						break;
 					case '3':
-						conv[h].insert(4 * i + 4, "°Ñ");
+						conv[h].insert(4 * i + 4, "åƒ");
 						break;
 					case '4':
-						conv[h].insert(4 * i + 4, "¸v");
+						conv[h].insert(4 * i + 4, "è‚†");
 						break;
 					case '5':
-						conv[h].insert(4 * i + 4, "¥î");
+						conv[h].insert(4 * i + 4, "ä¼");
 						break;
 					case '6':
-						conv[h].insert(4 * i + 4, "³°");
+						conv[h].insert(4 * i + 4, "é™¸");
 						break;
 					case '7':
-						conv[h].insert(4 * i + 4, "¬m");
+						conv[h].insert(4 * i + 4, "æŸ’");
 						break;
 					case '8':
-						conv[h].insert(4 * i + 4, "®Ã");
+						conv[h].insert(4 * i + 4, "æŒ");
 						break;
 					case '9':
-						conv[h].insert(4 * i + 4, "¨h");
+						conv[h].insert(4 * i + 4, "ç–");
 						break;
 					default:
 						break;
@@ -181,40 +181,40 @@ int main()
 				}
 				break;
 			case 5:
-				conv[h] = "¸U¥a¨Õ¬B";
+				conv[h] = "è¬ä»Ÿä½°æ‹¾";
 				for (int i = 0; i < sub[h].length(); i++)
 				{
 					switch (sub[h][i])
 					{
 					case '0':
-						conv[h].insert(4 * i, "¹s");
+						conv[h].insert(4 * i, "é›¶");
 						break;
 					case '1':
-						conv[h].insert(4 * i, "³ü");
+						conv[h].insert(4 * i, "å£¹");
 						break;
 					case '2':
-						conv[h].insert(4 * i, "¶L");
+						conv[h].insert(4 * i, "è²³");
 						break;
 					case '3':
-						conv[h].insert(4 * i, "°Ñ");
+						conv[h].insert(4 * i, "åƒ");
 						break;
 					case '4':
-						conv[h].insert(4 * i, "¸v");
+						conv[h].insert(4 * i, "è‚†");
 						break;
 					case '5':
-						conv[h].insert(4 * i, "¥î");
+						conv[h].insert(4 * i, "ä¼");
 						break;
 					case '6':
-						conv[h].insert(4 * i, "³°");
+						conv[h].insert(4 * i, "é™¸");
 						break;
 					case '7':
-						conv[h].insert(4 * i, "¬m");
+						conv[h].insert(4 * i, "æŸ’");
 						break;
 					case '8':
-						conv[h].insert(4 * i, "®Ã");
+						conv[h].insert(4 * i, "æŒ");
 						break;
 					case '9':
-						conv[h].insert(4 * i, "¨h");
+						conv[h].insert(4 * i, "ç–");
 						break;
 					default:
 						break;
@@ -225,7 +225,7 @@ int main()
 				break;
 			}
 			if (h == 0)
-				cout << conv[h] << "¡A";
+				cout << conv[h] << "ï¼Œ";
 			else
 				cout << conv[h];
 		}
@@ -233,21 +233,21 @@ int main()
 	else
 	{
 		string sub[2];
-		sub[0] = num.substr(0, num.find("¡A"));
-		sub[1] = num.substr(num.find("¡A"));
+		sub[0] = num.substr(0, num.find("ï¼Œ"));
+		sub[1] = num.substr(num.find("ï¼Œ"));
 		sub[1].erase(0, 4);
 
 		for (int i = 0; i < 2; i++)
 		{
 			string _1, _2, _3, _4, _5;
-			_1 = sub[i].substr(0, num.find("¸U"));
-			_2 = sub[i].substr(num.find("¸U"), 4);
+			_1 = sub[i].substr(0, num.find("è¬"));
+			_2 = sub[i].substr(num.find("è¬"), 4);
 			_2.erase(0, 2);
-			_3 = sub[i].substr(num.find("¥a"), 4);
+			_3 = sub[i].substr(num.find("ä»Ÿ"), 4);
 			_3.erase(0, 2);
-			_4 = sub[i].substr(num.find("¥a"), 4);
+			_4 = sub[i].substr(num.find("ä»Ÿ"), 4);
 			_4.erase(0, 2);
-			_5 = sub[i].substr(num.find("¬B"), 4);
+			_5 = sub[i].substr(num.find("æ‹¾"), 4);
 			_5.erase(0, 2);
 
 			sub[i].clear();
@@ -262,35 +262,35 @@ int main()
 			{
 				switch (subInChar[j])
 				{
-				case '¹s':
+				case 'é›¶':
 					if (j != 0)
 						conv[i][j] = '0';
 					break;
-				case '³ü':
+				case 'å£¹':
 					conv[i][j] = '1';
 					break;
-				case '¶L':
+				case 'è²³':
 					conv[i][j] = '2';
 					break;
-				case '°Ñ':
+				case 'åƒ':
 					conv[i][j] = '3';
 					break;
-				case '¸v':
+				case 'è‚†':
 					conv[i][j] = '4';
 					break;
-				case '¥î':
+				case 'ä¼':
 					conv[i][j] = '5';
 					break;
-				case '³°':
+				case 'é™¸':
 					conv[i][j] = '6';
 					break;
-				case '¬m':
+				case 'æŸ’':
 					conv[i][j] = '7';
 					break;
-				case '®Ã':
+				case 'æŒ':
 					conv[i][j] = '8';
 					break;
-				case '¨h':
+				case 'ç–':
 					conv[i][j] = '9';
 					break;
 				default:
