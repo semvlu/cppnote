@@ -4,7 +4,7 @@
 // Problem statement: This C++ program does the school task
 #include "School.h"
 
-School::School(string n, int num)
+School::School(string n, float num)
 {
 	name = n;
 	studentAmount = num;
@@ -17,12 +17,12 @@ void School::setStudentAmountNextYear(int amount) { studentAmountNextYear = amou
 void School::admissions(float amount) { this->studentAmount += amount; }
 void School::dropouts(float amount)
 {
-	if (amount <= this->studentAmount)
+	if (amount <= this->studentAmount && amount >= 0.0)
 		this->studentAmount -= amount;
 }
 void School::transfer(float amount, School& toSchool)
 {
-	if (amount <= this->studentAmount)
+	if (amount <= this->studentAmount && amount >= 0.0)
 	{
 		this->dropouts(amount);
 		toSchool.admissions(amount);
@@ -35,11 +35,11 @@ ostream& operator<<(ostream& strm, const School& s)
 	return strm;
 }
 
-PrivateSchool::PrivateSchool(string n, int num) : School(n, num), dropoutCnt(0){}
+PrivateSchool::PrivateSchool(string n, float num) : School(n, num), dropoutCnt(0){}
 int PrivateSchool::getDropoutCnt() { return dropoutCnt; }
 void PrivateSchool::dropouts(float amount)
 {
-	if (amount <= this->getStudentAmount())
+	if (amount <= this->getStudentAmount() && amount >= 0.0)
 	{
 		this->setStudentAmount(this->getStudentAmount() - amount);
 		if (this->dropoutCnt >= 1)
@@ -48,7 +48,7 @@ void PrivateSchool::dropouts(float amount)
 	}
 }
 
-PublicSchool::PublicSchool(string n, int num) : School(n, num), growing_rate(0.05) {}
+PublicSchool::PublicSchool(string n, float num) : School(n, num), growing_rate(0.05) {}
 void PublicSchool::apply_growth()
 {
 	this->setStudentAmountNextYear((1 + growing_rate) * this->getStudentAmountNextYear() + 1);
