@@ -16,13 +16,13 @@ public:
 	void setStudentAmount(int amount);
 	void setStudentAmountNextYear(int amount);
 	void admissions(float amount);
-	virtual void dropouts(float amount) = 0;
+	void dropouts(float amount);
 	void transfer(float amount, School& toSchool);
 	friend ostream& operator<<(ostream& strm, const School& s);
 private:
 	string name;
-	int studentAmount;
-	int studentAmountNextYear;
+	float studentAmount;
+	float studentAmountNextYear;
 };
 
 class PrivateSchool : public School
