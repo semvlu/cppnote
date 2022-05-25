@@ -18,7 +18,7 @@ int main()
 		getline(in, temp);
 		n.insert(temp);
 	}
-
+	n.erase("");
 	for (auto i : n)
 		cout << i << endl;
 }
